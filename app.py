@@ -780,5 +780,6 @@ def get_academic(pin,p_no):
 
 if __name__ == '__main__':
     #app.run(host ='0.0.0.0', port=80)
-    app.run(host='192.168.31.238')
+   
     #app.run()
+    app.run(threaded=True, port=5000)
