@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 #endpoint for bio-data, path ='/bio/'
 @app.route('/bio/<int:pin>+<int:p_no>', methods=['GET'])
-def get_pin(pin,phone_no):
+def get_pin(pin,p_no):
 
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36'
@@ -18,7 +18,7 @@ def get_pin(pin,phone_no):
 
     # Header data for logging in
     login_data1 = {'txtuserid': pin ,
-                  'txtpassword': phone_no,
+                  'txtpassword': p_no,
                   'Button2': 'Login',
                   'ctl00$MainContent$Button5': 'This semester'
     }
